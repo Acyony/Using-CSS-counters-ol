@@ -1,0 +1,22 @@
+.section {
+  counter-reset: section;
+}
+
+.subsection {
+  counter-increment: subsection;
+}
+
+ol {
+  list-style-type: none;
+}
+
+li {
+  list-style: none;
+  font-size: 1.3rem;
+  padding: 5px;
+}
+li::before {
+  counter-increment: section;
+  content: "List item " counters(section, ".") ") ";
+  color: red;
+}
